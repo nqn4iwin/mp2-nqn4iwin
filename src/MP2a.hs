@@ -33,7 +33,7 @@ cycleN n [x] = [x] : cycleN (n-1) [x]
    => [[1,2,3]]
 -}
 chunksOf :: Int -> [a] -> [[a]]
-chunksOf = undefined
+chunksOf n xs = xs[0..n]
 
 
 {-
