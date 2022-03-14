@@ -161,8 +161,7 @@ sublist (m, n) xs = (xs | [m..n], xs)
    luhn [3,9,2,8,6,4,1,7,2,0,5,2]
    => True
 -}
-luhn :: [Int]  -- numeric ID
-     ->  Bool  -- True if valid, False otherwise
+luhn :: [Int] ->  Bool
 luhn = undefined
 
 
@@ -200,8 +199,7 @@ runLengthEncode = undefined
    runLengthDecode (runLengthEncode "whhhhaaaaat?")
    => "whhhhaaaaat?"
 -}
-runLengthDecode :: [(Int,Char)]  -- run-length encoded string
-                -> String  -- original string
+runLengthDecode :: [(Int,Char)] -> String
 runLengthDecode = undefined
 
 
@@ -251,7 +249,5 @@ runLengthDecode = undefined
 
    vigenere "Yadda" "Hello, world!" => "FEOOO, UOUOD!"
 -}
-vigenere :: String  -- input string (plain text)
-         -> String  -- encryption key
-         -> String  -- encrypted string
+vigenere :: String -> String -> String
 vigenere = undefined
