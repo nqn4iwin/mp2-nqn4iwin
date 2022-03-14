@@ -17,7 +17,7 @@ import Data.Char
 -}
 cycleN :: Int -> [a] -> [a] 
 cycleN 0 _ = []
---cycleN n [x] = [x] : cycleN (n-1) [x]
+cycleN n [x] = [x] : cycleN (n-1) [x]
 
 
 {-
