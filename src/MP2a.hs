@@ -32,9 +32,7 @@ cycleN n [x] = [x] : cycleN (n-1) [x]
    chunksOf 5 [1..3]
    => [[1,2,3]]
 -}
-chunksOf :: Int  -- N
-         -> [a]  -- input list
-         -> [[a]]
+chunksOf :: Int -> [a] -> [[a]]
 chunksOf = undefined
 
 
@@ -50,8 +48,7 @@ chunksOf = undefined
    unzip4 [(1,'h',True,3.14), (2,'i',False,2.7), (3,'!',True,9.8)]
    => ([1,2,3],"hi!",[True,False,True],[3.14,2.7,9.8])
 -}
-unzip4 :: [(a,b,c,d)]  -- list of 4-tuples
-       -> ([a], [b], [c], [d])
+unzip4 :: [(a,b,c,d)] -> ([a], [b], [c], [d])
 unzip4 = undefined
 
 
@@ -70,9 +67,7 @@ unzip4 = undefined
    intersperse 0 [[1..5],[6..10]]
    => [1,2,3,4,5,0,6,7,8,9,10]
 -}
-intersperse :: a      -- X
-            -> [[a]]  -- input list (of lists)
-            -> [a]
+intersperse :: a -> [[a]] -> [a]
 intersperse = undefined
 
 
@@ -88,10 +83,7 @@ intersperse = undefined
    removeAll "aeiou" "supercalifragilisticexpialidocious"
    => "sprclfrglstcxpldcs"
 -}
-removeAll :: (Eq a) 
-          => [a]  -- candidates list
-          -> [a]  -- input list
-          -> [a]
+removeAll :: => [a] -> [a] -> [a]
 removeAll = undefined
 
 
@@ -118,11 +110,8 @@ removeAll = undefined
    sublist (6,100) "hello world!"
    => ("world!","hello ")
 -}
-sublist :: (Int,Int)  -- sublist range (M,N); M is inclusive, N exclusive
-        -> [a]        -- input list
-        -> ([a],[a])
-sublist = undefined
-
+sublist :: (Int,Int) -> [a] -> ([a],[a])
+sublist (m, n) xs = (xs | [m..n], xs)
 
 {-
    Applies Luhn's algorithm for numeric ID verification:
